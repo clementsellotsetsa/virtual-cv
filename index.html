@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Virtual CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#about">About Me</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <h1>Clement Sello Tsetsa</h1>
+    <p class="tagline">Aspiring Software Developer | Student</p>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <main>
+    <!-- About Me -->
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>A highly motivated graduate with an excellent academic record, educated in 
+        information technology and electrical engineering heavy current. Seeking 
+        opportunities like internships (BSc IT) or apprenticeships (N6).</p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="fade-in">
+      <h2>Resume</h2>
+      <p>You can download my resume by clicking the button below:</p>
+      <a href="resume.pdf" download>
+        <button>Download My CV</button>
+      </a>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive and interactive personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/clementsellotsetsa/portfolio" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Chess Game (Java)</h3>
+        <p>A Java-based chess application I started building to learn game development and object-oriented design.</p>
+        <a href="https://github.com/clementsellotsetsa/NWU-Chess-Team" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+        <li>Java</li>
+        <li>C#</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Email: clementsellotsetsa@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/clementsellotsetsa" target="_blank">https://github.com/clementsellotsetsa</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/clement-sello-tsetsa-895098126" target="_blank">www.linkedin.com/in/clement-sello-tsetsa-895098126</a></p>
+    </section>
+  </main>
+</body>
+</html>
