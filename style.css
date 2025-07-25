@@ -159,6 +159,14 @@ li:nth-child(7) { animation-delay: 1.3s; } /* Added for more list items */
   color: #ffffff;
 }
 
+#about p {
+  max-width: 800px; /* Limit paragraph width for readability */
+  margin: 0 auto;   /* Center the paragraph */
+  line-height: 1.6; /* Improve line spacing for readability */
+  text-align: justify; /* Justify text for a cleaner block appearance */
+  padding: 0 20px; /* Add some horizontal padding for smaller screens */
+}
+
 /* Project Section Styling */
 .projects-grid {
   display: grid;
