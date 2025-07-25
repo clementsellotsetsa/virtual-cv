@@ -38,21 +38,22 @@ h1:hover {
 
 section {
   margin-bottom: 30px;
+  padding: 0 20px; /* Add some horizontal padding to sections */
 }
 
 ul {
-  list-style: none;  /* Remove default bullets */
+  list-style: none;    /* Remove default bullets */
   padding: 0;
 }
 
 ul li::before {
   content: "• ";         /* Custom bullet */
-  color: #ffeaa7;         /* Light yellow bullet color */
+  color: #ffeaa7;        /* Light yellow bullet color */
   font-weight: bold;
 }
 
 a {
-  color: #ffeaa7;         /* Yellow links for contrast */
+  color: #ffeaa7;        /* Yellow links for contrast */
   text-decoration: none;
 }
 
@@ -114,6 +115,9 @@ li:nth-child(2) { animation-delay: 0.3s; }
 li:nth-child(3) { animation-delay: 0.5s; }
 li:nth-child(4) { animation-delay: 0.7s; }
 li:nth-child(5) { animation-delay: 0.9s; }
+li:nth-child(6) { animation-delay: 1.1s; } /* Added for more list items */
+li:nth-child(7) { animation-delay: 1.3s; } /* Added for more list items */
+
 
 @keyframes fadeInList {
   to {
@@ -156,27 +160,95 @@ li:nth-child(5) { animation-delay: 0.9s; }
 }
 
 /* Project Section Styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid */
+  gap: 20px; /* Space between grid items */
+  max-width: 1000px; /* Limit the overall width of the grid */
+  margin: 0 auto; /* Center the grid container */
+  padding: 20px 0; /* Add some vertical padding */
+}
+
 .project {
   background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
+  padding: 20px; /* Increased padding for better spacing */
   border-radius: 10px;
-  margin: 15px auto;
-  width: 80%;
-  max-width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex; /* Use flexbox for internal content alignment */
+  flex-direction: column;
+  justify-content: space-between; /* Pushes content and link to ends */
+  text-align: left; /* Align text to the left within each project card */
 }
 
 .project h3 {
   color: #ffeaa7;
+  margin-top: 0; /* Remove default top margin */
+}
+
+.project p {
+  flex-grow: 1; /* Allows paragraph to take available space */
 }
 
 .project a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px; /* More space above the link */
   color: #ffffff;
   font-weight: bold;
+  align-self: flex-start; /* Align link to the left within the flex container */
 }
 
 .project a:hover {
   text-decoration: underline;
+}
+
+/* Skills Section Styling */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Two columns on larger screens, one on smaller */
+  gap: 30px; /* Space between tech and soft skills sections */
+  max-width: 800px; /* Limit overall width */
+  margin: 0 auto; /* Center the grid */
+  padding: 20px 0;
+}
+
+.tech-skills,
+.soft-skills {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px; /* More padding for a better look */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Align text within skills columns to the left */
+}
+
+.skills-grid h3 {
+  color: #ffeaa7;
+  margin-top: 0;
+  text-align: center; /* Center the sub-headings */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+
+  .project {
+    width: auto; /* Remove fixed width for projects on small screens */
+    max-width: none; /* Allow projects to take full width */
+    margin: 15px 0; /* Adjust margin */
+  }
+
+  .tech-skills,
+  .soft-skills {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack nav links on very small screens */
+    gap: 10px;
+  }
 }
